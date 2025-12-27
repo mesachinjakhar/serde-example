@@ -3,6 +3,7 @@ use serde::{Serialize, Deserialize};
 #[derive(Serialize, Deserialize, Debug)]
 // #[serde(rename(serialize = "ser_name", deserialize = "de_name"))]
 // #[serde(rename_all(serialize = "UPPERCASE"))]
+#[serde(tag = "type")]
 pub struct Point {
     x: i32,
     y: i32
