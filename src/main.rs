@@ -15,6 +15,13 @@ enum Event {
     UserDeleted { user_id: i32 },
 }
 
+#[derive(Serialize, Deserialize)]
+#[serde(deny_unknown_fields)]
+struct User {
+    id: i32,
+    name: String,
+}
+
 
 fn main() {
     let point = Point {
