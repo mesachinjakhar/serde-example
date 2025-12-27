@@ -16,4 +16,8 @@ fn main() {
     let serilized = serde_json::to_string(&point).unwrap();
 
     println!("serilized: {}", serilized);
+
+    // convert json string back to the strcut
+    let deserilized: Point = serde_json::from_str(&serilized).unwrap(); 
+    println!("deserilized: {:?}", deserilized);
 }
