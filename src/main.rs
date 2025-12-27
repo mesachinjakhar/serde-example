@@ -11,7 +11,9 @@ pub struct Point {
 
 #[derive(Serialize, Deserialize)]
 #[serde(rename_all_fields(serialize = "camelCase"))]
-#[serde(tag = "type", content = "data")]
+// #[serde(tag = "type", content = "data")]
+#[serde(untagged)]
+
 enum Event {
     UserCreated { user_id: i32, user_name: String },
     UserDeleted { user_id: i32 },
