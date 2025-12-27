@@ -13,11 +13,11 @@ fn main() {
     };
     
     // convert struct into JSON string
-    let serilized = serde_json::to_string(&point).unwrap();
+    let serialized = serde_json::to_string(&point).unwrap();
 
-    println!("serilized: {}", serilized);
+    println!("serialized: {}", serialized);
 
     // convert json string back to the strcut
-    let deserilized: Point = serde_json::from_str(&serilized).unwrap(); 
-    println!("deserilized: {:?}", deserilized);
+    let deserialized: Point = serde_json::from_str(&serialized).unwrap(); 
+    println!("deserialized: {:?}", deserialized);
 }
